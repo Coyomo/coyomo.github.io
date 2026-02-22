@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects & Experience - Max G</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header, footer {
+            background: #1f1f1f;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff6b6b;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #ff6b6b;
+        }
+        .event {
+            position: relative;
+            margin-left: 60px;
+            margin-bottom: 2rem;
+        }
+        .event h4 {
+            margin: 0;
+            color: #ff6b6b;
+        }
+        .event p {
+            margin: 0.2rem 0 0 0;
+        }
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border: 4px solid #ff6b6b;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Projects & Experience</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <div class="timeline">
+            <div class="event">
+                <h4>School - 2020-2024</h4>
+                <p>Studied computational linguistics and computer science.</p>
+            </div>
+            <div class="event">
+                <h4>Kairos Project</h4>
+                <p>Developed a platform for [brief description of Kairos project].</p>
+            </div>
+            <div class="event">
+                <h4>Crohn's Project</h4>
+                <p>Worked on a health-focused data application for Crohn’s disease.</p>
+            </div>
+            <div class="event">
+                <h4>Professional Experience</h4>
+                <p>Past roles in [industry/company] with focus on development and analysis.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 Max G
+    </footer>
+</body>
+</html>
