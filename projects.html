@@ -3,153 +3,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects & Experience - Max G</title>
+<title>City Night Timeline</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body {
     font-family: 'Segoe UI', sans-serif;
+    background: #0B1D3A; /* City Night background */
+    color: #E0E0E0;
     margin: 0;
-    background: #0D0D0D;
-    color: #E0E0E0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  header, footer {
-    background: #1A1A1A;
-    color: #E0E0E0;
-    text-align: center;
-    padding: 1.5rem 1rem;
-  }
-  footer {
-    color: #A0A0A0;
-  }
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    background: #1A1A1A;
-  }
-  nav a {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    background: #4DA6FF;
-    color: #0D0D0D;
-    font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  nav a:hover {
-    background: #6BB7FF;
-    transform: translateY(-2px);
-  }
-  main {
-    flex-grow: 1;
-    max-width: 900px;
-    margin: 2rem auto;
     padding: 2rem;
-    background: #1A1A1A;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  }
-  h2 {
-    color: #4DA6FF;
-    margin-top: 0;
   }
 
-  /* Timeline Styles */
-  .timeline {
-    position: relative;
-    margin: 2rem 0;
-    padding-left: 40px;
+  h1 {
+    text-align: center;
+    color: #4DA6FF;
   }
-  .timeline::before {
+
+  /* Timeline container */
+  #cd-timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+
+  /* Vertical timeline line */
+  #cd-timeline::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 30px;
     top: 0;
     bottom: 0;
-    width: 4px;
-    background: #4DA6FF;  /* accent line */
+    width: 6px; /* thicker line */
+    background: #4DA6FF; /* accent line */
+    border-radius: 3px;
   }
-  .event {
+
+  /* Timeline block */
+  .cd-timeline-block {
     position: relative;
-    margin-bottom: 2rem;
+    margin: 2rem 0 4rem 60px;
   }
-  .event::before {
-    content: '';
+
+  /* Timeline icon */
+  .cd-timeline-img {
     position: absolute;
-    left: -36px;
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    background: #1A1A1A;
-    border: 4px solid #4DA6FF;  /* accent node */
+    left: -4px;
+    top: 0;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    background: #162A4D; /* dark block color */
+    border: 4px solid #4DA6FF; /* accent border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #4DA6FF;
   }
-  .event h4 {
-    margin: 0;
-    color: #4DA6FF;          /* accent title */
+
+  /* Timeline content box */
+  .cd-timeline-content {
+    background: #162A4D; /* content background */
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
   }
-  .event p {
-    margin: 0.2rem 0 0 0;
+
+  .cd-timeline-content h2 {
+    margin-top: 0;
+    color: #4DA6FF; /* section titles accent */
+  }
+
+  .cd-timeline-content p {
+    color: #E0E0E0; /* text color */
+  }
+
+  .timeline-content-info {
+    font-size: 0.85rem;
+    color: #A0A0A0; /* muted gray info text */
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-content-info i {
+    margin-right: 0.3rem;
+  }
+
+  .content-skills {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1rem;
+    list-style-type: disc;
+    color: #4DA6FF; /* blue skill text */
+  }
+
+  .content-skills li {
+    margin-bottom: 0.3rem;
+  }
+
+  .cd-date {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    color: #A0A0A0; /* muted gray date */
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 600px) {
+    #cd-timeline::before {
+      left: 20px;
+    }
+    .cd-timeline-block {
+      margin-left: 50px;
+    }
+    .cd-timeline-img {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Projects & Experience</h1>
-</header>
+<h1>My Projects & Experience</h1>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Me</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<main>
-  
-
-<div class="timeline">
-  <div class="outer">
-    <div class="card">
-      <div class="info">
-        <h3 class="title">Title 1</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
+<section id="cd-timeline" class="cd-container">
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-picture">
+      <i class="fa fa-briefcase"></i>
     </div>
-    <div class="card">
-      <div class="info">
-        <h3 class="title">Title 2</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <div class="cd-timeline-content">
+      <h2>Kairos</h2>
+      <div class="timeline-content-info">
+        <span class="timeline-content-info-title">
+          <i class="fa fa-certificate" aria-hidden="true"></i>
+          Interim Product Manager
+        </span>
+        <span class="timeline-content-info-date">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>
+          May 2025 - Present
+        </span>
       </div>
-    </div>
-    <div class="card">
-      <div class="info">
-        <h3 class="title">Title 3</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="info">
-        <h3 class="title">Title 4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
-    </div>
-    <div class="card">
-      <div class="info">
-        <h3 class="title">Title 5</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
+      <p>Working on collecting, analyzing, and evaluating EEG data to determine the focus state of individuals.</p>
+      <ul class="content-skills">
+        <li>Python</li>
+        <li>Pytorch</li>
+        <li>Sklearn</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+      </ul>
     </div>
   </div>
-</div>
-</main>
 
-<footer>
-  &copy; 2026 Max G
-</footer>
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-movie">
+      <i class="fa fa-code"></i>
+    </div>
+    <div class="cd-timeline-content">
+      <h2>Title of section 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+      <span class="cd-date">Jan 18</span>
+    </div>
+  </div>
+
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-picture">
+      <i class="fa fa-puzzle-piece"></i>
+    </div>
+    <div class="cd-timeline-content">
+      <h2>Title of section 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+      <span class="cd-date">Jan 24</span>
+    </div>
+  </div>
+
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-location">
+      <i class="fa fa-map-marker"></i>
+    </div>
+    <div class="cd-timeline-content">
+      <h2>Title of section 4</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+      <span class="cd-date">Feb 14</span>
+    </div>
+  </div>
+
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-location">
+      <i class="fa fa-map-marker"></i>
+    </div>
+    <div class="cd-timeline-content">
+      <h2>Title of section 5</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+      <span class="cd-date">Feb 18</span>
+    </div>
+  </div>
+
+  <div class="cd-timeline-block">
+    <div class="cd-timeline-img cd-movie">
+      <i class="fa fa-film"></i>
+    </div>
+    <div class="cd-timeline-content">
+      <h2>Final Section</h2>
+      <p>This is the content of the last section</p>
+      <span class="cd-date">Feb 26</span>
+    </div>
+  </div>
+
+</section>
 
 </body>
 </html>
