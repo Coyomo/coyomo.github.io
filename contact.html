@@ -90,15 +90,17 @@
 
 <main>
   <p>If you’d like to reach out, feel free to email me:</p>
-  <input type="email" placeholder="Your Email Here" />
-  <br>
-  <textarea placeholder="Your Message Here" rows="4"></textarea>
-  <br>
-  <button>Send</button>
+
+  <!-- Formspree Form -->
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="email" name="email" placeholder="Your Email Here" required /><br>
+    <textarea name="message" placeholder="Your Message Here" rows="4" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
 </main>
 
 <footer>
-  &copy; 2026 Max G
+  &copy; 2026 Maximiliano González
 </footer>
 
 </body>
