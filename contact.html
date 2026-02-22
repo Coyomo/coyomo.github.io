@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Maximiliano González</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header, footer {
-            background: #1f1f1f;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            background: #333;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 0.5rem 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #ff6b6b;
-        }
-        main {
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        input[type="email"], textarea {
-            width: 80%;
-            padding: 0.5rem;
-            margin-top: 1rem;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-        button {
-            margin-top: 1rem;
-            padding: 0.6rem 1.2rem;
-            border: none;
-            background: #ff6b6b;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #ff3b3b;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Max G</title>
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #0D0D0D;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header, footer {
+    background: #1A1A1A;
+    color: #E0E0E0;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  footer {
+    color: #A0A0A0;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    background: #1A1A1A;
+  }
+  nav a {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: #4DA6FF;
+    color: #0D0D0D;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  nav a:hover {
+    background: #6BB7FF;
+    transform: translateY(-2px);
+  }
+  main {
+    flex-grow: 1;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1A1A1A;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+  input[type="email"], textarea {
+    width: 80%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    border: 1px solid #333333;
+    background: #0D0D0D;
+    color: #E0E0E0;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #4DA6FF;
+    color: #0D0D0D;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #6BB7FF;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Contact Me</h1>
-    </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="projects.html">Projects</a>
-    </nav>
+<header>
+  <h1>Contact Me</h1>
+</header>
 
-    <main>
-        <p>If you’d like to reach out, feel free to email me:</p>
-        <input type="email" placeholder="Your Email Here" />
-        <br>
-        <textarea placeholder="Your Message Here" rows="4"></textarea>
-        <br>
-        <button>Send</button>
-    </main>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Me</a>
+  <a href="projects.html">Projects</a>
+</nav>
 
-    <footer>
-        &copy; 2026 Max G
-    </footer>
+<main>
+  <p>If you’d like to reach out, feel free to email me:</p>
+  <input type="email" placeholder="Your Email Here" />
+  <br>
+  <textarea placeholder="Your Message Here" rows="4"></textarea>
+  <br>
+  <button>Send</button>
+</main>
+
+<footer>
+  &copy; 2026 Max G
+</footer>
+
 </body>
 </html>
